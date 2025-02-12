@@ -9,6 +9,7 @@ import Button from '../components/Button';
 import Checkbox from '../components/Checkbox';
 import Input from '../components/Input';
 import Dropdown from '../components/Dropdown';
+import { Tooltip } from '@mui/material';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 90 },
@@ -24,7 +25,11 @@ const columns: GridColDef[] = [
   { field: 'city', headerName: 'City', width: 175, resizable: false },
   {
     field: 'isActive',
-    renderHeader: () => <VisibilityIcon />,
+    renderHeader: () => (
+      <Tooltip title="Is active">
+        <VisibilityIcon />
+      </Tooltip>
+    ),
     renderCell: (params) => params.row.isActive && <VisibilityIcon />,
     width: 61,
     sortable: false,
