@@ -1,4 +1,4 @@
-import { Grid2, Link, Typography } from "@mui/material";
+import { Grid2, Link, Typography } from '@mui/material';
 
 interface Props {
   label: string;
@@ -13,8 +13,8 @@ function KeyValuePair({ label, value, isEmail = false }: Props) {
         <Typography
           variant="body1"
           fontSize={12}
-          color="#757575"
           textAlign="right"
+          sx={{ color: (theme) => theme.palette.tertiary.main }}
         >
           {label}
         </Typography>
@@ -23,12 +23,20 @@ function KeyValuePair({ label, value, isEmail = false }: Props) {
         {isEmail ? (
           <Link
             href={`mailto:${value}`}
-            sx={{ textDecoration: "none", color: "#2196F3", fontSize: "12px" }}
+            sx={{
+              textDecoration: 'none',
+              color: (theme) => theme.palette.primary.main,
+              fontSize: '12px',
+            }}
           >
             {value}
           </Link>
         ) : (
-          <Typography variant="body1" fontSize={12} color="#757575">
+          <Typography
+            variant="body1"
+            fontSize={12}
+            sx={{ color: (theme) => theme.palette.tertiary.main }}
+          >
             {value}
           </Typography>
         )}

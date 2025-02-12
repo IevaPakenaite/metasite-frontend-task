@@ -1,4 +1,4 @@
-import { Dispatch } from "redux";
+import { Dispatch } from 'redux';
 import {
   getAllContactsRequest,
   getAllContactsSuccess,
@@ -6,9 +6,9 @@ import {
   getContactByIdRequest,
   getContactByIdSuccess,
   getContactByIdError,
-} from "../slices/contactsSlice";
-import contactsService from "../services/contactsService";
-import { Contact } from "../models/contactModel";
+} from '../slices/contactsSlice';
+import contactsService from '../services/contactsService';
+import { Contact } from '../models/contactModel';
 
 function getAllContacts() {
   return (dispatch: Dispatch) => {

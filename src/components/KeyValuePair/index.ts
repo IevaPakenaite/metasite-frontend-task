@@ -1,3 +1,3 @@
-import KeyValuePair from "./KeyValuePair";
+import KeyValuePair from './KeyValuePair';
 
 export default KeyValuePair;

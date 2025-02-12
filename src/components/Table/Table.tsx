@@ -1,4 +1,4 @@
-import { Paper } from "@mui/material";
+import { Paper } from '@mui/material';
 import {
   DataGrid,
   GridColDef,
@@ -6,7 +6,7 @@ import {
   GridRowModel,
   GridRowParams,
   GridRowsProp,
-} from "@mui/x-data-grid";
+} from '@mui/x-data-grid';
 
 interface Props {
   rows: GridRowsProp;
@@ -16,13 +16,7 @@ interface Props {
   onRowClick: (row: GridRowModel) => void;
 }
 
-function Table({
-  rows,
-  columns,
-  columnVisibilityModel,
-  loading = false,
-  onRowClick,
-}: Props) {
+function Table({ rows, columns, columnVisibilityModel, loading = false, onRowClick }: Props) {
   const handleRowClick = (params: GridRowParams) => {
     onRowClick(params.row);
   };
@@ -34,7 +28,7 @@ function Table({
         columns={columns}
         initialState={{
           sorting: {
-            sortModel: [{ field: "name", sort: "asc" }],
+            sortModel: [{ field: 'name', sort: 'asc' }],
           },
         }}
         loading={loading}
@@ -43,19 +37,20 @@ function Table({
         disableColumnMenu
         hideFooter
         sx={{
-          "& .MuiDataGrid-columnHeaders": {
-            color: "#fff",
+          '& .MuiDataGrid-columnHeaders': {
+            color: 'text.secondary',
             fontSize: 16,
           },
-          "& .MuiDataGrid-columnHeader": {
-            backgroundColor: "#2196F3",
+          '& .MuiDataGrid-columnHeader': {
+            backgroundColor: 'primary.main',
           },
-          "& .MuiDataGrid-sortIcon": {
-            color: "#fff",
+          '& .MuiDataGrid-sortIcon': {
+            color: 'secondary.main',
           },
-          "& .MuiButtonBase-root": {
-            color: "#fff",
+          '& .MuiButtonBase-root': {
+            color: 'secondary.main',
           },
+          border: 'none',
         }}
       />
     </Paper>

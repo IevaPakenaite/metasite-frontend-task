@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Contact } from "../models/contactModel";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Contact } from '../models/contactModel';
 
 interface ContactsSliceState {
   loadingContacts: boolean;
@@ -18,7 +18,7 @@ const initialState: ContactsSliceState = {
 };
 
 export const contactsSlice = createSlice({
-  name: "contacts",
+  name: 'contacts',
   initialState,
   reducers: {
     getAllContactsRequest: (state) => {
